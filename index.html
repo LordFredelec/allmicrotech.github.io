@@ -1,8 +1,23 @@
 <!DOCTYPE html>
 <html>
 
-store: new Apicart.Store({
-	token: qmfJqKFmlvWIAZnvy0nv1Fo?fVqjfDVbtV7W!VOp0bii_t2L!gwzp5FwcfE3IIwW
-})
+<div>
+  <!-- Replace path to products by the url of your products from the administration -->
+  <button data-apicart-add-item="https://cdn.apicart.dev/external/1ul17vo8kawm4soh717wv3no961gxsfu/data/01/1.json">Buy</button>
+  <button data-apicart-remove-item="https://cdn.apicart.dev/external/wlhv1egho2u4p0e0nkne2mks7f9btigi/data/01/1.json">Remove</button>
+  <div id="app">
+    <!-- #apicart-cart-dropdown will be replaced with the cart dropdown -->
+    <div id="apicart-cart-dropdown"></div>
+    <!-- #apicart will be replaced with the rest of the application -->
+    <div id="apicart"></div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@apicart/vue-components@1.0.0-alpha7/dist/bundles/default/default.full.min.js"></script>
+<script>
+  Apicart.setDevEnv().configure({
+    // Replace Apicart Sandbox token with your token from the administration
+    store: new Apicart.Store({ token: '9mCu3DlBCa4REI?Q7kKly!Rw6!_FvD8K_dgPXe1b20?r6!sPTQMyCpq_ADt!jXOD' }),
+  }).initVueBundle();
+</script>
 
 </html>
